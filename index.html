@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,8 +25,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>Human2Bot</title>
+  <link rel="icon" type="image/x-icon" href="static/images/h2b.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,21 +53,22 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Human2Bot: Learning Zero-Shot Reward Functions for Robotic Manipulation from Human Demonstrations</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Yasir Salam</a><sup></sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Yinbei Li</a><sup></sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                    <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Jonas Herzog</a><sup></sup>,</span>
+                      <span class="author-block">
+                        <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Jiaqiang Yang<sup>*</sup></a>
+                        </span>
+                    </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">Zhejiang University, China <br>*Corresponding Author</span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -78,24 +80,15 @@
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
-                        <span>Paper</span>
+                        <span>Paper (Accepted)</span>
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
+                    
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/yasirbot8/Human2Bot" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -104,16 +97,6 @@
                   </a>
                 </span>
 
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
             </div>
           </div>
         </div>
@@ -129,11 +112,11 @@
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
+        <source src="static/videos/Human2Bot.mp4"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+       H2B: Zero-shot Human-to-robot Task Transfer in Simulation and Real-World Environments 
       </h2>
     </div>
   </div>
@@ -148,7 +131,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Developing effective reward functions is crucial for robot learning, as they guide behavior and facilitate adaptation to human-like tasks. We present Human2Bot (H2B), advancing the learning of such a generalized multi-task reward function that can be used zero-shot to execute unknown tasks in unseen environments. H2B is a newly designed task similarity estimation model that is trained on a large dataset of human videos. The model determines whether two videos from different environments represent the same task. At test time, the model serves as a reward function, evaluating how closely a robot’s execution matches the human demonstration. While previous approaches necessitate robot-specific data to learn reward functions or policies, our method can learn without any robot datasets. To achieve generalization in robotic environments, we incorporate a domain augmentation process that generates synthetic videos with varied visual appearances resembling simulation environments, alongside a multi-scale inter-frame attention mechanism that aligns human and robot task understanding. Finally, H2B is integrated with Visual Model Predictive Control (VMPC) to perform manipulation tasks in simulation and on the xARM6 robot in real-world settings. Our approach outperforms previous methods in simulated and real-world environments trained solely on human data, eliminating the need for privileged robot datasets.
           </p>
         </div>
       </div>
@@ -158,127 +141,85 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
+<!-- Image display -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+      <!-- First image -->
+      <h2 class="title is-3 has-text-centered">Introduction</h2>
+      <div class="mb-6">
+        <img src="static/images/Introduction.png" alt="Human demonstration and robot learning" style="width: 650px; height: auto; display: block; margin: 0 auto;"/>
+        <p style="text-align: justify; max-width: 650px; margin: 20px auto; font-size: 16px; line-height: 1.6;">
+          <strong>Left:</strong> A human demonstration is given (e.g., closing a drawer). <strong>Right:</strong> The robot learns to deduce the task through its interactions with the environment by executing actions and recording observations. H2B evaluates each sequence of observations based on its similarity to the human demonstration and provides reward on the robot’s performance, guiding it to accomplish the task like the human.
+        </p>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+
+      <!-- Second image -->
+      <h2 class="title is-3 has-text-centered">Proposed Method </h2>
+      <div class="mb-6">
+        <img src="static/images/Architecture.png" alt="Vision Dynamics Profiler architecture" style="width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+        <p style="text-align: justify; max-width: 1000px; margin: 20px auto; font-size: 16px; line-height: 1.6;">
+          The <strong>Vision Dynamics Profiler (VDP)</strong> takes conditionally augmented video frames as input to produce frame-level features through a pre-trained encoder. The feature reduction and multi-scale inter-frame attention layers further process these features to output a representation for each video. <strong>Frame-to-frame cosine similarity</strong> is then calculated between the two videos. The <strong>Similarity Fusion Network (SFN)</strong> processes the similarity vector through a series of 1D-convolution layers to generate a similarity score.
+        </p>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
+      <!-- Third image -->
+      <div class="mb-6">
+        <img src="static/images/iCEM.png" alt="Vision Dynamics Profiler architecture" style="width: 900px; height: auto; display: block; margin: 0 auto;"/>
+        <p style="text-align: justify; max-width: 900px; margin: 20px auto; font-size: 16px; line-height: 1.6;">
+          During the <strong>final task execution</strong>, we used a single human demonstration of the task and sampled robot trajectories from the environment as input. We evaluate all these trajectories using </strong>H2B</strong> to determine their similarity to the demonstration, and assigning rewards accordingly. </strong>iCEM</strong> then optimizes its parameters based on the top-K trajectories by rewards to generate trajectories in the next iteration that closely mimic the demonstrated task.
+        </p>
+      </div>
+      <!-- Fourth image -->
+      <h2 class="title is-3 has-text-centered">Experimental Setup and Results </h2>
+      <img src="static/images/Training.png" alt="Vision Dynamics Profiler architecture" style="width: 900px; height: auto; display: block; margin: 0 auto;"/>
+        <p style="text-align: justify; max-width: 900px; margin: 20px auto; font-size: 16px; line-height: 1.6;">
+          <strong>Training (left):</strong> The agent learns a reward function from numerous human videos encompassing various tasks and environments. <strong>Inference (right):</strong> Evaluation is conducted across diverse simulated environments and real-robot scenarios, both involving tabletop settings with various interactive objects.
+        </p>
+      </div>
+      <!-- Fifth image -->
+      <div class="mb-6">
+        <img src="static/images/table1.png" alt="Vision Dynamics Profiler architecture" style="width: 900px; height: auto; display: block; margin: 0 auto;"/>
+  
+        </p>
+      </div>
+    
+      <img src="static/images/expd.png" alt="Training Data Diversity" style="width: 1000px; height: auto; display: block; margin: 0 auto;"/>
+        <p style="text-align: justify; max-width: 1000px; margin: 20px auto; font-size: 16px; line-height: 1.6;">
+          Success rate for three target tasks, showing the impact of increasing non-target training tasks on generalization. The dotted line represents the average success rate.
+        </p>
+      </div>
+      <!-- Image display side by side with text under the left image -->
+<section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+      <!-- Images side by side -->
+      <div class="columns is-centered">
+        <!-- Seventh image (left) -->
+        <div class="column is-half">
+          <img src="static/images/table2.png" alt="Ablation study results" style="width: 520px; height: auto; display: block; margin: 0 auto;"/>
           
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+          </p>
+        </div>
+
+        <!-- Eighth image (right) -->
+        <div class="column is-half">
+          <img src="static/images/expf.png" alt="Task success rates" style="width: 400px; height: auto; display: block; margin: 0 auto;"/>
+          <!-- Text under the left image -->
+          <p style="text-align: justify; max-width: 400px; margin: 20px auto; font-size: 14px; line-height: 1.6;">
+            We studied the impact of removing the domain augmentation <span style="font-family: 'Times New Roman', serif; font-style: italic;">G</span>, the SFN component <span style="font-family: 'Times New Roman', serif; font-style: italic;">SFN</span>, and the multi-scale inter-frame attention mechanism <span style="font-family: 'Times New Roman', serif; font-style: italic;">f<sub>a</sub></span> on robot task success rates. The error bars indicate the standard deviation.
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
+<!-- End image display -->
 
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>Will be updated soon.</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
@@ -291,9 +232,7 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
           </p>
 
         </div>
